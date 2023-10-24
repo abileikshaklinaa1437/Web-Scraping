@@ -1,0 +1,10 @@
+# To Scrap a String Column
+import pandas as pd
+url='https://en.wikipedia.org/wiki/List_of_wealthiest_Americans_by_net_worth'
+dfs = pd.read_html(url,flavor='bs4') 
+    # flovor='bs4' to scrap the correct the data as it is in the webpage 
+dfs
+dfs[0]
+df=dfs[0]
+df
+df[['Name']]
