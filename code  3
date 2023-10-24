@@ -1,0 +1,68 @@
+# Web Scrap
+
+import pandas as pd 
+
+## Getting a table from a web page using read_html
+
+url ='https://en.wikipedia.org/wiki/Billionaire'
+
+dfs = pd.read_html(url , match='Number of billionaires')
+
+dfs
+
+dfs[0]
+
+## parameter skiprows,header
+
+dfs = pd.read_html(url , match='Number of billionaires', skiprows=1)
+dfs[0]
+
+dfs = pd.read_html(url , match='Number of billionaires', skiprows=1, header=0)
+dfs[0]
+
+len(dfs)
+
+df=dfs[0]
+
+df
+
+df.to_csv('billion',index=False)
+
+# Web Scrap
+
+import pandas as pd 
+
+
+
+## Getting a table from a web page using read_html
+
+url ='https://en.wikipedia.org/wiki/Billionaire'
+
+
+dfs = pd.read_html(url , match='Number of billionaires')
+
+
+dfs
+
+
+dfs[0]
+
+
+## parameter skiprows,header
+
+dfs = pd.read_html(url , match='Number of billionaires', skiprows=1)
+dfs[0]
+
+dfs = pd.read_html(url , match='Number of billionaires', skiprows=1, header=0)
+dfs[0]
+
+len(dfs)
+
+
+df=dfs[0]
+
+
+df
+
+
+df.to_csv('billion',index=False)
